@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>D3 Map Example</title>
+
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<style type="text/css">
+		.states {
+			fill: #ccc;
+			stroke: #fff;
+		}
+
+		.counties:hover {
+		  fill: red;
+		}
+
+		.tract-borders {
+		  fill: none;
+		  stroke: #fff;
+		  stroke-width: 0.5px;
+		  stroke-linejoin: round;
+		  stroke-linecap: round;
+		  pointer-events: none;
+		}
+
+		#tooltip{
+			position: fixed;
+			width: 100px;
+			height: 100px;
+			background-color: black; 
+		}
+	</style>
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+	<div class="col-lg-12">
+		<h1>Population Density</h1>
+		<p>This map shows the number of residents per square mile as estimated in the 2014 American Community Survey by the Census Bureau. You can click on individual census tracts to inspect their details.</p>
+	</div>
+	
+	<div class="col-lg-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Census Tract Details
+			</div>
+			<div class="panel-body">
+			<table class="table">
+				<tr>
+					<td>Census Tract ID</td>
+					<td id="census-tract-id"></td>
+				</tr>
+				<tr>
+					<td>Population Density</td>
+					<td id="pop-density"></td>
+				</tr>
+			</table>
+			</div>
+		</div>
+	</div>
+		
+		
+
+		<div id="map-area">
+			
+		</div>
+				
+	</div>
+	
+</div>
+<!-- <div id="tooltip" class="tooltip">
+	<p>Some text in here</p>
+</div> -->
+
+	<script type="text/javascript" src="app.js">
+
+	</script>
+</body>
+</html>
